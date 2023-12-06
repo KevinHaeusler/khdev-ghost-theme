@@ -4,5 +4,14 @@
         "assets/built/*.js": true,
         "assets/built/*.css": true,
         "assets/built/*.map": true,
-    }
+    },
+    "editor.formatOnSave": true,
+        "[handlebars]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "files.associations": {
+          "*.hbs": "handlebars"
+        },
+      
+      
 }

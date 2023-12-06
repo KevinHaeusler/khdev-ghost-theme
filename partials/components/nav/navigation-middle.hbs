@@ -1,0 +1,25 @@
+<nav>
+  <div class="flex space-x-48 justify-around items-center">
+    <div class="">
+      {{#foreach @site.navigation}}
+      <a
+        class="text-xl hover:underline hover:underline-offset-lg dark:text-stone-300"
+        href="{{ this.url }}"
+        >{{ label }}</a
+      >
+      {{/foreach}}
+    </div>
+    <div class="">
+      <a class="" href="{{@site.url}}">
+        {{#if @site.logo}}
+        <img class="object-contain h-12 w-12" src="{{@site.logo}}" alt="{{@site.title}}" />
+        {{else}}
+        {{@site.title}}
+        {{/if}}
+      </a>
+    </div>
+    <div class="">
+      {{> "components/nav/darkmode-toggle"}}
+    </div>
+  </div>
+</nav>
